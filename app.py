@@ -5,14 +5,14 @@ import logging
 from sklearn.linear_model import LogisticRegression
 logging.basicConfig(filename='logist.log',level=logging.DEBUG,format='%(asctime)s %(levelname)s %(message)s')
 
-main=Flask(__name__)#initializing a flask app
+app=Flask(__name__)#initializing a flask app
 
-@main.route('/',methods=['GET'])
+@app.route('/',methods=['GET'])
 @cross_origin()
 def homePage():
     return render_template('index.html')
 
-@main.route('/classification',methods=['POST','GET'])
+@app.route('/classification',methods=['POST','GET'])
 @cross_origin()
 def classification():
     if request.method == "POST":
@@ -156,5 +156,5 @@ def classification():
 
 
 if __name__=='__main__':
-    main.run(debug=True)
+    app.run(debug=True)
 
