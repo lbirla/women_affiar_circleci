@@ -1,18 +1,18 @@
 import unittest
 
-from app import app
+from main import main
 import os
 
 
 class TestToPerform(unittest.TestCase):
     def setUp(self):
-        self.app = app.test_client()
+        self.main = main.test_client()
 
     def tearDown(self):
         pass
 
     def test_page(self):
-        response = self.app.get('/', follow_redirects=True)
+        response = self.main.get('/', follow_redirects=True)
         print(response)
         self.assertEqual(response.status_code, 200)
 
