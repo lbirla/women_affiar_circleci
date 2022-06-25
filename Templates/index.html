@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extra Marital Affairs Classification</title>
+    <link href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand navbar-dark bg-success">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./">
+            Extra-Marital Affairs
+        </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- NAVBAR LINKS -->
+            <li class="nav-item">
+                <a class="nav-link active" href="#">About Data</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- FORM -->
+<form action="/classification" method="POST">
+<!--Input Value-->
+<h3>Let's See in which Class your INPUT DATA falls</h3>
+<div class="mb-3">
+
+
+    <!-- Password Input -->
+    <div class="mb-3">
+        <label for="Age" class="form-label">
+            AGE:
+        </label>
+        <input
+                name="age"
+                type=number
+                class="age"
+                id="age"
+                placeholder="Enter Age"
+                required
+        />
+        <label for="yrs-married" class="form-label">
+            Years of Married:
+        </label>
+        <input
+                name="yrs_married"
+                type=number
+                class="yrs_married"
+                id="yrs_married"
+                placeholder="Enter Year of marriage"
+                required
+        />
+
+        <label for="children" class="form-label">
+            No. of children:
+        </label>
+        <input
+                name="children"
+                type=number
+                class="children"
+                id="children"
+                placeholder="Enter No. of children"
+                required
+        />
+         <label for="religious" class="form-label">
+        Religious:
+    </label>
+        <select name="religious" id="religious">
+            <option name="Not religious">Not religious</option>
+         <option name="Average">Average</option>
+         <option name="Good">Good</option>
+         <option name="Strong religious">Strong religious</option>
+        </select>
+ <label for="Education" class="form-label">
+        Education:
+ </label>
+   <select name="Education" id="Education">
+       <option name="Grade School">Grade School</option>
+         <option name="High School"> High School</option>
+         <option name="Some College">Some College</option>
+         <option name="College Graduate">College Graduate</option>
+         <option name="Some Graduate School">Some Graduate School</option>
+       <option name="advanced degree">advanced degree</option>
+
+   </select>
+<label for="occupation_woman" class="form-label">
+        occupation_woman:
+    </label>
+        <select name="occupation_woman" id="occupation_woman" >
+        <option value="student">student</option>
+        <option value="unskilled">farming/semi-skilled/unskilled</option>
+        <option value="skilled">teacher/nurse/writer/technician/skilled</option>
+        <option value="business">managerial/business</option>
+            <option value="professional">professional_advance_degree</option>
+
+    </select>
+<label for="occupation_husb" class="form-label">
+        occupation_husb:
+    </label>
+        <select name="occupation_husb" id="occupation_husb" >
+     <option value="student">student</option>
+        <option value="unskilled">farming/semi-skilled/unskilled</option>
+        <option value="skilled">teacher/nurse/writer/technician/skilled</option>
+        <option value="business">managerial/business</option>
+            <option value="professional">professional_advance_degree</option>
+
+    </select>
+        <label for="Rate_marriage" class="form-label">
+        Rate_marriage:
+    </label>
+     <select name="rate_marriage" id="rate_marriage">
+                  <option name="Very Poor">Very Poor</option>
+         <option name="Poor"> Poor</option>
+         <option name="Average">Average</option>
+         <option name="Good">Good</option>
+         <option name="Very Good">Very Good</option>
+
+     </select>
+
+    </div>
+    <!-- Checkbox -->
+
+    <button name="submit" type="submit" class="btn btn-primary">
+        Submit
+    </button>
+</div>
+</form>
+    <script src=
+                    "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+</body>
+</html>
